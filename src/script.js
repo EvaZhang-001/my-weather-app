@@ -63,21 +63,6 @@ function searchCity(city) {
 let search = document.querySelector("#search");
 search.addEventListener("submit", showCity);
 
-//Celcius and Fahrenheit
-function toFahrenheit() {
-  let degree = document.querySelector(".degree");
-  degree.innerHTML = "45";
-}
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", toFahrenheit);
-
-function toCelcius() {
-  let degree = document.querySelector(".degree");
-  degree.innerHTML = "5";
-}
-let celcius = document.querySelector("#celcius");
-celcius.addEventListener("click", toCelcius);
-
 //geolocation
 function showAddress() {
   navigator.geolocation.getCurrentPosition(handlePosition);
@@ -98,10 +83,22 @@ function showGeoLocation(response) {
   console.log(response);
   let geoLocationCity = response.data.address.city;
   let geoLocationCountry = response.data.address.country;
-  alert(
-    `your current city is ${geoLocationCity} and country is ${geoLocationCountry} `
-  );
   let identifiedAddress = document.querySelector("#showCity");
   identifiedAddress.innerHTML = geoLocationCity;
   searchCity(geoLocationCity);
 }
+
+//Celcius and Fahrenheit
+function toFahrenheit() {
+  let degree = document.querySelector(".degree");
+  degree.innerHTML = "45";
+}
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", toFahrenheit);
+
+function toCelcius() {
+  let degree = document.querySelector(".degree");
+  degree.innerHTML = "5";
+}
+let celcius = document.querySelector("#celcius");
+celcius.addEventListener("click", toCelcius);
