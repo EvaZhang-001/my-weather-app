@@ -15,7 +15,6 @@ body {
   background-color: #e5e5e5;
   border-color: rgb(118, 118, 118);
 }
-//
 
 h1 {
   color: #202124;
@@ -45,6 +44,11 @@ li {
   width: 900px;
   display: block;
   margin: 40px auto;
+  margin-bottom: 10px;
+}
+
+.openSource {
+  margin-left: 108px;
 }
 .switch-degree {
   font-size: 18px;
